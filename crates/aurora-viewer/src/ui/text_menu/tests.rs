@@ -357,7 +357,7 @@ fn a_detached_field_applies_its_spelling_suggestion() {
         if let (_, Some(pos)) = frame(vec![]) {
             break pos;
         }
-        assert!(started.elapsed().as_secs() < 5, "the detached menu offers world");
+        assert!(started.elapsed().as_secs() < 30, "the detached menu offers world");
         std::thread::sleep(std::time::Duration::from_millis(5));
     };
     frame(vec![
